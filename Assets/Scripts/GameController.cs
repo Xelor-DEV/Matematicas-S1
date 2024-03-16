@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] private Text transform_position;
+    [SerializeField] private Text transform_scale;
+    [SerializeField] private Text transform_rotation;
+    [SerializeField] private Text transform_localPosition;
+    [SerializeField] private Text transform_localScale;
+    [SerializeField] private Text transform_localRotation;
+    [SerializeField] private PlayerController jugador;
     void Update()
     {
-        
+        transform_position.text = "Transform.Position: " + jugador.transform.position;
     }
 }
